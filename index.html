@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#070710">
+<title>For Hacker & Pandhi ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="password-gate" id="passwordGate">
+  <div class="password-card">
+    <div class="password-sparkle">✦</div>
+    <p class="eyebrow">A PRIVATE LITTLE SURPRISE</p>
+    <h1>Hey, <em>Hacker.</em></h1>
+    <p class="copy">This birthday surprise is just for you. 💚<br>Enter our secret word to open it.</p>
+    <form id="passwordForm" class="password-form">
+      <label for="sitePassword">Our secret word</label>
+      <input id="sitePassword" type="password" placeholder="Enter password" autocomplete="off" required>
+      <button class="next" type="submit">Unlock your surprise <span>♡</span></button>
+      <p id="passwordError" class="password-error" role="alert" aria-live="polite"></p>
+    </form>
+    <p class="footnote">A little surprise from your online bestie ✦</p>
+  </div>
+</div>
+<canvas id="stars" aria-hidden="true"></canvas><div class="grain" aria-hidden="true"></div>
+<div class="music"><button id="musicBtn" aria-pressed="false">♫ <span id="musicText">Sound off</span></button></div>
+<main>
+  <section class="scene active" id="scene1">
+    <div class="moon">✦</div><p class="eyebrow">A LITTLE BIRTHDAY SURPRISE</p>
+    <h1>Hey, <em>Hacker.</em><br>Hey, <em>Lachimi.</em></h1>
+    <p class="copy">I made a little something for you.<br>Click through and enjoy your birthday surprise.</p>
+    <button class="next" data-next="scene2">Click to begin <span>→</span></button>
+    <p class="footnote">Your online bestie made this for you ✦</p>
+  </section>
+
+  <section class="scene" id="scene2">
+    <p class="step">01 <span>— A LITTLE THOUGHT</span></p><div class="glow-heart">♡</div>
+    <p class="eyebrow">BEFORE YOUR WISHES BEGIN</p>
+    <h2>Manam Freefire Lo Kalisam<br><em>Nuvu Naatho Kalavadham Valla Naku Oka Girl Bestie Vachindhi (July 12)</em></h2>
+    <p class="copy wide">Manam Game Lo Friends Ayam Kani Okasari Ayina Real Life Kalavali 😎😎</p>
+    <p class="quote">“Glad I found a friend like you.”</p>
+    <button class="next" data-next="scene3">There's one more thing <span>→</span></button>
+  </section>
+
+  <section class="scene" id="scene3">
+    <p class="step">02 <span>— MAKE A WISH</span></p>
+    <p class="eyebrow">IT'S YOUR SPECIAL DAY</p>
+    <h2>Keep Shining And<br><em>Keep Laughing</em></h2>
+    <p class="copy">Can't Be There To Sing Happy Birthday In Person But Game Ki Ra Nenu Oka Song Padhutha,<br>So Here's A Tiny Cake On Your Screen.</p>
+    <div class="cake-wrap">
+      <div class="cake-glow"></div>
+      <div class="cake" id="cake">
+        <div class="candles">
+          <button class="candle lit" aria-label="Blow out candle 1"><span class="flame"></span></button>
+          <button class="candle lit" aria-label="Blow out candle 2"><span class="flame"></span></button>
+          <button class="candle lit" aria-label="Blow out candle 3"><span class="flame"></span></button>
+        </div>
+        <div class="icing"></div><div class="cake-top"></div><div class="cake-body"><span class="icing-drip d1"></span><span class="icing-drip d2"></span><span class="icing-drip d3"></span><span class="cake-heart">♡</span></div><div class="cake-plate"></div>
+      </div>
+    </div>
+    <p class="candle-hint" id="candleHint">Tap each candle to blow it out ✨</p>
+    <p class="copy small">Blow out the candles and make a wish.<br>Make it a good one, bestie.</p>
+    <button class="next hidden" id="afterCandles" data-next="scene4">My wish for you <span>→</span></button>
+  </section>
+
+  <section class="scene" id="scene4">
+    <p class="step">03 <span>— MY WISH FOR YOU</span></p><div class="wish-stars">✦ ✧ ✦</div>
+    <p class="eyebrow">FROM YOUR ONLINE BESTIE</p>
+    <h2>Happy Birthday My Hacker<br><em>(Lachimi, bot, purii, santha, senior ..........)</em></h2>
+    <p class="copy wide">I hope you get loads of laughs, good memories, big wins, less stress, and plenty of reasons to be happy. You deserve a brilliant year ahead.</p>
+    <p class="quote">Manam Eppudho Kapudhu Kaludam Ani Korukuntu 😍.<br><em>Until Then, Online Bestie Duties Continue. 😎</em></p>
+    <button class="next" data-next="scene5">Okay… one last surprise <span>→</span></button>
+  </section>
+
+  <section class="scene reveal-scene" id="scene5">
+    <p class="step">04 <span>— THE PHOTO REVEAL</span></p>
+    <p class="eyebrow">AND HERE'S THE BIRTHDAY STAR</p>
+    <h2>Happy birthday,<br><em>Chinnam Vasanth Lakshmi.</em></h2>
+    <div class="photo-wrap" id="photoWrap">
+      <div class="photo-light"></div>
+      <img src="pandhi-photo.jpg" alt="A special birthday photo for Pandhi" id="pandhiPhoto">
+      <div class="photo-frame-line"></div><span class="photo-label">BIRTHDAY PHOTO MOMENT ✦</span>
+    </div>
+    <p class="photo-caption">“Eppudhu Happy Ga Undhu Boostuu,<br>Nuvu Navutu Untey Chala Baguntav,<br>Prati China Daniki Edhavaka Tikka Fellow 😊😊”</p>
+    <button class="next" id="letterBtn">One last message <span>♡</span></button>
+    <div class="final-letter hidden" id="finalLetter">
+      <p>Happy birthday, Pandhi! 🎂</p>
+      <p>Wish I could be there to celebrate and annoy you in person 😂 I'm really glad we became friends, and I hope this little surprise makes you smile today.</p>
+      <p>Until we finally meet, I'll be cheering you on from here. Keep being your chaotic, amazing self, and have the best birthday.</p>
+      <p class="signoff">Happy birthday, Hacker. Happy birthday, Pandhi. Best-friend status: permanently unlocked. 🥳</p>
+    </div>
+    <button class="next final-slide-button" id="finalSlideButton" data-next="scene6">One last thing 😎 <span>→</span></button>
+    <p class="end-note">MADE BY YOUR BESTIE ✦</p>
+  </section>
+
+  <section class="scene final-only" id="scene6">
+    <div class="final-decoration" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></div>
+    <p class="final-kicker">ONE LAST THING, MADAM JI</p>
+    <h2 class="final-title">
+      <span>On Your Duties</span>
+      <em>Madam Garuuuuuuuuu!</em>
+    </h2>
+    <div class="final-funny-emojis" aria-label="Playful emojis">😁 <span>😍</span> 😎 😝</div>
+    <div class="green-heart-grid" aria-label="Green hearts">
+      <span>💚</span><span>💚</span><span>💚</span><span>💚</span>
+      <span>💚</span><span>💚</span><span>💚</span><span>💚</span>
+      <span>💚</span><span>💚</span><span>💚</span><span>💚</span>
+      <span>💚</span><span>💚</span><span>💚</span><span>💚</span>
+    </div>
+    <p class="final-footer-note">BIRTHDAY ORDER: KEEP SMILING. NO EXCUSES. 😎</p>
+  </section>
+
+</main>
+<div class="particles" id="particles" aria-hidden="true"></div>
+<script src="script.js"></script>
+</body></html>
